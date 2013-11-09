@@ -1,4 +1,5 @@
 AuditRailsExample::Application.routes.draw do
+  mount AuditRails::Engine, at: "/audit_rails"
   resources :posts
 
   resources :users, except: [:edit, :update, :destroy]
