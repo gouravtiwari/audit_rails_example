@@ -10,8 +10,8 @@
  *
  *= require_self
  *= require_tree .
+ *= require foundation_and_overrides
  */
 
  input{ border-radius: 45px; border: 1px solid #CCC;}
  textarea{ border-radius: 45px; border: 1px solid #CCC; height: 5em;}
- *= require foundation_and_overrides
