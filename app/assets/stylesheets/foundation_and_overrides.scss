@@ -968,7 +968,7 @@
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+ $topbar-bg: #2284a1 !default;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -983,8 +983,8 @@
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
-// $topbar-link-weight: bold;
-// $topbar-link-font-size: emCalc(13px);
+$topbar-link-weight: normal;
+$topbar-link-font-size: emCalc(17px);
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;

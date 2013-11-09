@@ -8,10 +8,29 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
  *= require foundation_and_overrides
+ *= require_self
  */
 
- input{ border-radius: 45px; border: 1px solid #CCC;}
- textarea{ border-radius: 45px; border: 1px solid #CCC; height: 5em;}
+input{ border-radius: 45px; border: 1px solid #CCC;}
+textarea{ border-radius: 45px; border: 1px solid #CCC; height: 5em;}
+.top-bar-section ul li a:not(.button):hover {     /* Topbar menu items. */
+    background-color: #090909;
+    color: white;
+}
+
+.top-bar-section ul li a:not(.button):active {     /* Topbar menu items. */
+    background-color: #090909;
+    color: white;
+}
+
+.top-bar-section ul li.active a {
+    background: #2ba6cb;
+}
+.top-bar-section ul li.not-click a:hover {     /* This one is optional. Text logo on the left of the Topbar. */
+    background-color: #2c8cb1;
+    color: white;
+}
+
+

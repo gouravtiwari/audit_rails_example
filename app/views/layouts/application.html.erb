@@ -33,12 +33,14 @@
         </ul>
         <section class="top-bar-section">
           <ul class="left">
-            <li class="click"><%= link_to 'Audits Reports', audit_rails.audits_url %></li>
+            <li class="not-click <%= selected('home') %>"><%= link_to 'Home', root_url %></li>
+            <li class="divider"></li>
+            <li class="not-click"><%= link_to 'Audits Reports', audit_rails.audits_url %></li>
             <% if @current_user %>
               <li class="divider"></li>
-              <li class="not-click"><%= link_to 'Create sample posts', posts_url %></li>
+              <li class="not-click <%= selected('posts') %>"><%= link_to 'Create sample posts', posts_url %></li>
               <li class="divider"></li>
-              <li class="not-click"><%= link_to 'Visit sample users', users_url %></li>
+              <li class="not-click <%= selected('users') %>"><%= link_to 'Visit sample users', users_url %></li>
               <li class="divider"></li>
             <% end %>
           </ul>
