@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_current_user, except: [:login]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show]
   before_action :find_user, only: [:login]
 
   def login

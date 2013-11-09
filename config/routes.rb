@@ -1,4 +1,6 @@
 AuditRailsExample::Application.routes.draw do
+  resources :posts
+
   resources :users, except: [:edit, :update, :destroy]
 
   post  'login' => 'users#login', as: :login
