@@ -31,7 +31,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Auditor for your rails application
-gem 'audit_rails', path: '/Users/gouravtiwari/audit_rails'#, '~>1.1.9'
+gem 'audit_rails', '~>1.1.10'
 
 group :production do
   gem 'pg'
