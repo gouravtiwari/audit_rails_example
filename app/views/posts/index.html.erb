@@ -1,29 +1,22 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="small-4">
+  <h3>Posts</h3>
+  <%= link_to 'Add new post', new_post_path %>
+</div>
+<br/>
+<br/>
+<div class="small-4">
+  <ol>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.name %></td>
-        <td><%= post.description %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li>
+        <ul class="no-bullet">
+          <li><%= link_to post.name, post %></li>
+          <li><%= post.description %></li>
+          <li><%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete Post', post, method: :delete, data: { confirm: 'Are you sure?' }%></li>
+          
+        </ul>
+      </li>
     <% end %>
-  </tbody>
-</table>
-
+  </ol>
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+

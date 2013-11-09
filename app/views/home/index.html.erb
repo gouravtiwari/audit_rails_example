@@ -1,11 +1,14 @@
-<h2>Sign in</h2>
-<%= form_for(@user, :url => login_path) do |f| %>
-  <div>
-    <%= f.label :name %>
-    <br/>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.submit "Sign in" %>
+<% unless @current_user %>
+  <div class="small-8">
+    <h3 class="subheader">Want to see it in action?</h3>
+    <%= form_for(@user, :url => login_path) do |f| %>
+      <div class="small-5 left">
+        <%= f.text_field :name, class: "round #{'error' if flash[:error]}", placeholder: "Enter Ram or John" %>
+      </div>
+      <div class="small-1 left">&nbsp;</div>
+      <div class="small-2 left">
+        <%= f.submit "Enter", class: "button round small" %>
+      </div>
+    <% end %>
   </div>
 <% end %>

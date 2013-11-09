@@ -16,6 +16,6 @@
     <%= f.text_field :name %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Add new user', class: 'button round small' %> |   <%= link_to 'Back', users_path, class: 'button round small' %>
   </div>
 <% end %>

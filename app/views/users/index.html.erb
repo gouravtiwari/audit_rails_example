@@ -1,25 +1,15 @@
-<h1>Listing users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= link_to 'Show', user %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<div class="small-4">
+  <h3>Users</h3>
+  <%= link_to 'Add new user', new_user_path %>
+  <br/><br/>
+  <ul class="no-bullet">
+    <li>
+      <ul>
+        <% @users.each do |user| %>
+          <li><%= link_to user.name, user %></li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+  <br/>
+</div>

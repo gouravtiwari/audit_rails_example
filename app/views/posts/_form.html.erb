@@ -20,6 +20,6 @@
     <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', class: 'button round small' %> | <%= link_to 'Back', posts_path, class: 'button round small' %>
   </div>
 <% end %>

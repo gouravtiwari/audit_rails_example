@@ -1,15 +1,70 @@
 <!DOCTYPE html>
-<html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
   <head>
-    <title>AuditRailsExample</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "AuditRailsExample" %></title>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <%= link_to 'logout', logout_url unless controller_name == 'home'%>
-    <br/>
-    <%= yield %>
 
+  <body>
+    <div class="fixed contain-to-grid">
+      <nav class="top-bar" style="">
+        <ul class="title-area">
+          <!-- Title Area -->
+          <li class="name">
+
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="left">
+            <li class="click"><%= link_to 'Audits Reports', audit_rails.audits_url %></li>
+            <% if @current_user %>
+              <li class="divider"></li>
+              <li class="not-click"><%= link_to 'Create sample posts', posts_url %></li>
+              <li class="divider"></li>
+              <li class="not-click"><%= link_to 'Visit sample users', users_url %></li>
+              <li class="divider"></li>
+            <% end %>
+          </ul>
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class='not-click'><%= link_to "Logged in as #{@current_user.name}", '#' if @current_user%></li>
+            <li class="divider"></li>
+            <li class='not-click'><%= link_to 'logout', logout_url if @current_user%></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    
+    <br/>
+    <div class="row">
+      <p><%=link_to 'audit_rails', 'https://github.com/gouravtiwari/audit_rails' %> is an action based Auditor, which has internal as well as outgoing link tracking capability.</p>
+
+      <p>It is inspired from many great audit gems in rails community that audits model, this one goes one step further. Roughly it is doing similar to what Omniture or Google analytics does, but has very basic features for now. Checkout these features in <%= link_to 'Audit Reports', audit_rails.audits_url %> </p>
+      <p>Now also has <%= link_to 'analytics(charts)', audit_rails.analytics_audits_url %> for user counts and page views</p>
+
+      <p>This application uses <%=link_to 'Foundation', 'http://foundation.zurb.com' %> and <%=link_to 'audit_rails', 'https://github.com/gouravtiwari/audit_rails' %> uses <%= link_to 'Twitter Bootstrap', 'http://getbootstrap.com' %>! </p>
+    </div>
+    <div class="row">
+      <%= yield %>
+    </div>
+
+    <%= javascript_include_tag "application" %>
   </body>
 </html>

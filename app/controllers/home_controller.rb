@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @user = User.new
+    p "session[:current_user]: #{session[:current_user]}"
+    @user = User.new unless session[:current_user]
   end
 end

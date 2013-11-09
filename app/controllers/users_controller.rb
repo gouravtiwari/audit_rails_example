@@ -5,7 +5,13 @@ class UsersController < ApplicationController
 
   def login
     session[:current_user] = @user
-    redirect_to users_url
+    if @user
+      redirect_to users_url
+    else
+      @user = User.new
+      flash[:error] = 'Please enter Ram or John'
+      render 'home/index'
+    end
   end
 
   def logout
@@ -36,8 +42,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @user }
+        format.html { redirect_to users_url, notice: 'User was successfully created.' }
       else
         format.html { render action: 'new' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
