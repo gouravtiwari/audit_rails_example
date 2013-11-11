@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/gouravtiwari/audit_rails
+GIT
+  remote: https://github.com/gouravtiwari/audit_rails
+  revision: b062d26f5483c1f9f034450ac0caa853cf43bc3f
   specs:
     audit_rails (1.1.10)
       jquery-rails
