@@ -32,5 +32,18 @@ textarea{ border-radius: 45px; border: 1px solid #CCC; height: 5em;}
     background-color: #2c8cb1;
     color: white;
 }
-
-
+.visitor{
+  background-color: #2ba6cb;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+}
+.visitor-count{
+  border: solid 1px #2ba6cb;
+  text-align: center;
+  border-radius: 5px;
+  color: #2ba6cb;
+  padding: 5px;
+  font-size: 1.5em;
+}

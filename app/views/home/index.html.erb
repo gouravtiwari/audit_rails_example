@@ -1,3 +1,28 @@
+<div class="row">
+  <div class="small-10 columns">
+    <p><%=link_to 'audit_rails', 'https://github.com/gouravtiwari/audit_rails' %> is an action based Auditor, which has internal as well as outgoing link tracking capability.</p>
+
+    <p>It is inspired from many great audit gems in rails community that audits model, this one goes one step further. Roughly it is doing similar to what Omniture or Google analytics does, but has very basic features for now. Checkout these features in <%= link_to 'Audit Reports', audit_rails.audits_url %> </p>
+    <p>Now also has <%= link_to 'analytics(charts)', audit_rails.analytics_audits_url %> for user counts and page views</p>
+
+    <p>This application uses <%=link_to 'Foundation', 'http://foundation.zurb.com' %> and <%=link_to 'audit_rails', 'https://github.com/gouravtiwari/audit_rails' %> uses <%= link_to 'Twitter Bootstrap', 'http://getbootstrap.com' %>! </p>
+  </div>
+  <div class="small-2 columns">
+    <div class="row">
+      <div class="visitor">Total visitors </div>
+    </div>
+    <div class="row">
+      <div class="visitor-count"><%= @visitor_count %></div>
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+      <div class="visitor">Unique visitors</div>
+    </div>
+    <div class="row">
+      <div class="visitor-count"><%= @unique_visitor_count %></div>
+    </div>
+  </div>
+</div>
 <% unless @current_user %>
   <div class="small-8">
     <h3 class="subheader">Want to see it in action?</h3>

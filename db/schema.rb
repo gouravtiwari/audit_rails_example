@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20131109063719) do
     t.string   "controller"
     t.string   "description"
     t.string   "user_name"
+    t.string   "ip_address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
