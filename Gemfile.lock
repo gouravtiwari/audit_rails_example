@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/gouravtiwari/audit_rails
+  revision: d2f6931080b68efee4308f81141bed9b700e5f41
+  specs:
+    audit_rails (2.0.0)
+      jquery-rails
+      rails (> 3.2.6, < 5)
+      to_xls (~> 1.5.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,10 +36,6 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
-    audit_rails (2.0.0)
-      jquery-rails
-      rails (> 3.2.6, < 5)
-      to_xls (~> 1.5.1)
     builder (3.1.4)
     chunky_png (1.2.9)
     coffee-rails (4.0.1)
@@ -133,7 +138,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  audit_rails (~> 2.0.0)
+  audit_rails!
   coffee-rails (~> 4.0.0)
   compass-rails
   jbuilder (~> 1.2)
