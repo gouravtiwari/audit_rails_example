@@ -24,7 +24,7 @@
   </div>
 </div>
 <% unless @current_user %>
-  <div class="small-8">
+  <div class="small-8 row" style='padding-left: 17px;'>
     <h3 class="subheader">Want to see it in action?</h3>
     <%= form_for(@user, :url => login_path) do |f| %>
       <div class="small-5 left">
