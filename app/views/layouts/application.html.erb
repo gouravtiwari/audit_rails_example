@@ -35,7 +35,7 @@
           <ul class="left">
             <li class="not-click <%= selected('home') %>"><%= link_to 'Home', root_url %></li>
             <li class="divider"></li>
-            <li class="not-click"><%= link_to 'Audits Reports', audit_rails.audits_url %></li>
+            <li class="not-click"><%= link_to 'Analytics', audit_rails.analytics_audits_url %></li>
             <% if @current_user %>
               <li class="divider"></li>
               <li class="not-click <%= selected('posts') %>"><%= link_to 'Create sample posts', posts_url %></li>
