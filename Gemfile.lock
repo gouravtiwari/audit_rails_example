@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/gouravtiwari/audit_rails
-  revision: 47b685cb62c186365ede59569b30d33827168e7a
+  revision: cbdb5c7a7c3af10a997a924e6d1643a09bbc497a
   specs:
-    audit_rails (2.0.1)
+    audit_rails (2.0.2)
       jquery-rails
       rails (> 3.2.6, < 5)
       to_xls (~> 1.5.1)
