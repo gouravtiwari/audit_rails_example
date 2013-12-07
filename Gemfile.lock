@@ -1,5 +1,5 @@
 GIT
-  remote: http://github.com/gouravtiwari/audit_rails
+  remote: https://github.com/gouravtiwari/audit_rails
   revision: 6c1217b8edf9507f821407eb64bd140851137926
   specs:
     audit_rails (2.0.3)
