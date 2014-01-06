@@ -1,0 +1,24 @@
+.navbar{
+  border-bottom: 0;
+}
+.navbar-nav{
+  margin-left: 70px;
+}
+.navbar-nav > li > a {
+padding-top: 7px;
+padding-bottom: 7px;
+background-color: #288086;
+color: #ffffff;
+}
+.navbar-nav > li > a:hover {
+padding-top: 7px;
+padding-bottom: 7px;
+background-color: #2C8D94;
+color: #ffffff;
+}
+.navbar-nav > li.active > a {
+padding-top: 7px;
+padding-bottom: 7px;
+background-color: #ffffff;
+color: #288086;
+}
