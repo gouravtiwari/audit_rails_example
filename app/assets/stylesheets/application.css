@@ -8,42 +8,18 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require foundation_and_overrides
  *= require_self
+ *= require twitter/bootstrap
+ *= require bootstrap_override
  */
 
-input{ border-radius: 45px; border: 1px solid #CCC;}
+/*input{ border-radius: 45px; border: 1px solid #CCC;}
 textarea{ border-radius: 45px; border: 1px solid #CCC; height: 5em;}
-.top-bar-section ul li a:not(.button):hover {     /* Topbar menu items. */
-    background-color: #090909;
-    color: white;
+*/
+.top-header{
+  background-color: #39ACB4;
+  border: none;
 }
-
-.top-bar-section ul li a:not(.button):active {     /* Topbar menu items. */
-    background-color: #090909;
-    color: white;
-}
-
-.top-bar-section ul li.active a {
-    background: #2ba6cb;
-}
-.top-bar-section ul li.not-click a:hover {     /* This one is optional. Text logo on the left of the Topbar. */
-    background-color: #2c8cb1;
-    color: white;
-}
-.visitor{
-  background-color: #2ba6cb;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  padding: 5px;
-}
-.visitor-count{
-  border: solid 1px #2ba6cb;
-  text-align: center;
-  border-radius: 5px;
-  color: #2ba6cb;
-  padding: 5px;
-  font-size: 1.5em;
+.navbar-bottom{
+  padding-top: 58px;
 }
