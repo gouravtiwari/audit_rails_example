@@ -11,15 +11,5 @@
  *= require_self
  *= require twitter/bootstrap
  *= require bootstrap_override
+ *= require styles
  */
-
-/*input{ border-radius: 45px; border: 1px solid #CCC;}
-textarea{ border-radius: 45px; border: 1px solid #CCC; height: 5em;}
-*/
-.top-header{
-  background-color: #39ACB4;
-  border: none;
-}
-.navbar-bottom{
-  padding-top: 58px;
-}

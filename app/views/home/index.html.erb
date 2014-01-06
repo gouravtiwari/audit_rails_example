@@ -1,42 +1,26 @@
-<div class="row">
-  <div class="small-10 columns">
-    <p><%=link_to 'audit_rails', 'https://github.com/gouravtiwari/audit_rails' %> is an action based Auditor, which has internal as well as outgoing link tracking capability.</p>
-
-    <p>It is inspired from many great audit gems in rails community that audits model, this one goes one step further. Roughly it is doing similar to what Omniture or Google analytics does, but has very basic features for now. Checkout these features in <%= link_to 'Audit Reports', audit_rails.audits_url %> </p>
-    <p>Now also has <%= link_to 'analytics(charts)', audit_rails.analytics_audits_url %> for user counts and page views</p>
-
-    <p>This application uses <%=link_to 'Foundation', 'http://foundation.zurb.com' %> and <%=link_to 'audit_rails', 'https://github.com/gouravtiwari/audit_rails' %> uses <%= link_to 'Twitter Bootstrap', 'http://getbootstrap.com' %>! </p>
-  </div>
-  <div class="small-2 columns">
-    <div class="row">
-      <div class="visitor">Total visitors </div>
-    </div>
-    <div class="row">
-      <div class="visitor-count"><%= @visitor_count %></div>
-    </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div class="visitor">Unique visitors</div>
-    </div>
-    <div class="row">
-      <div class="visitor-count"><%= @unique_visitor_count %></div>
-    </div>
-  </div>
+<div class="row justified-row">
+  <div id='visitor-count' class="visitors-row" data-count-total='<%= @visitor_count %>' data-label-total='Total Visitors' data-count-unique='<%= @unique_visitor_count %>' data-label-unique='Unique Visitors'></div>
 </div>
-<% unless @current_user %>
-  <div class="small-8 row" style='padding-left: 17px;'>
-    <h3 class="subheader">Want to see it in action?</h3>
-    <%= form_for(@user, :url => login_path) do |f| %>
-      <div class="small-5 left">
-        <%= f.text_field :name, class: "round #{'error' if flash[:error]}", placeholder: "Enter Ram or John" %>
-      </div>
-      <div class="small-1 left">&nbsp;</div>
-      <div class="small-2 left">
-        <%= f.submit "Enter", class: "button round small" %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-<div class="small-8">
+<div class="row justified-row">
+  <p><%=link_to 'Audit Rails', 'https://github.com/gouravtiwari/audit_rails' %> is an action based Auditor, which has internal as well as outgoing link tracking capability.</p>
+</div>
+<div class="row justified-row">
+  <p>It is inspired from many great audit gems in rails community that audits model, this one goes one step further. Roughly it is doing similar to what Omniture or Google analytics does, but has very basic features for now. Checkout these features in <%= link_to 'Audit Reports', audit_rails.audits_url %> </p>
+</div>
+<div class="row justified-row">
+  <p>Now also has <%= link_to 'analytics(charts)', audit_rails.analytics_audits_url %> for user counts and page views</p>
   <%= link_to image_tag('analytics.png'), audit_rails.analytics_audits_url%>
+</div>
+<div class="row justified-row">
+  <% unless @current_user %>
+    <div class="small-8 row" style='padding-left: 17px;'>
+      <h3 class="subheader">Want to see it in action?</h3>
+      <%= form_for(@user, :url => login_path) do |f| %>
+        <div class="small-5 left">
+          <%= f.text_field :name, class: "round #{'error' if flash[:error]}", placeholder: "Enter Ram or John" %>
+          <%= f.submit "Enter", class: "button round small" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
