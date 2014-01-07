@@ -16,21 +16,23 @@ function circles(elementId){
       var centerX = 120;
       var centerY = canvas.height / 2;
       
-      context.globalAlpha = 0.8;
+      context.globalAlpha = 0.5;
       context.beginPath();
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.fillStyle = '#E8BE8E';
+      context.fillStyle = '#e98e4e';
       context.fill();
+      
+      context.globalAlpha = 1;
       context.textAlign = 'center';
       context.fillStyle ="#ffffff";  // <-- Text colour here
       context.textBaseline='middle';
       
       //count
-      context.font = '50pt Verdana';
+      context.font = '72px Helvetica Neue LT std';
       context.fillText(countTotal, centerX, centerY);
 
       // label
-      context.font = '16pt Arial';
+      context.font = '24px Helvetica Neue LT std';
       context.fillText(labelTotal, centerX, centerY + centerY/2);
       context.closePath();
 
@@ -38,21 +40,23 @@ function circles(elementId){
       centerX = 320;
       centerY = canvas.height / 2;
       
-      context.globalAlpha = 0.8;      
+      context.globalAlpha = 0.5;      
       context.beginPath();
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.fillStyle = '#93D4D9';
+      context.fillStyle = '#7d9aaa';
       context.fill();
+      
+      context.globalAlpha = 1;
       context.textAlign = 'center';
       context.fillStyle ="#ffffff";  // <-- Text colour here
       context.textBaseline='middle';
       
       //count
-      context.font = '50pt Verdana';
+      context.font = '72px Helvetica Neue LT std';
       context.fillText(countUnique, centerX, centerY);
 
       // label
-      context.font = '16pt Arial';
+      context.font = '24px Helvetica Neue LT std';
       context.fillText(labelUnique, centerX, centerY + centerY/2);
 
       div.appendChild(canvas);
