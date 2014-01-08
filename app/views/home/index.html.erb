@@ -1,26 +1,44 @@
 <div class="row justified-row">
+  <p><%=link_to 'Audit Rails', 'https://github.com/gouravtiwari/audit_rails' %> is an auditor for your rails application and much more!</p>
+</div>
+<div class="row justified-row">
   <div id='visitor-count' class="visitors-row" data-count-total='<%= @visitor_count %>' data-label-total='Total Visitors' data-count-unique='<%= @unique_visitor_count %>' data-label-unique='Unique Visitors'></div>
 </div>
-<div class="row justified-row">
-  <p><%=link_to 'Audit Rails', 'https://github.com/gouravtiwari/audit_rails' %> is an action based Auditor, which has internal as well as outgoing link tracking capability.</p>
-</div>
-<div class="row justified-row">
-  <p>It is inspired from many great audit gems in rails community that audits model, this one goes one step further. Roughly it is doing similar to what Omniture or Google analytics does, but has very basic features for now. Checkout these features in <%= link_to 'Audit Reports', audit_rails.audits_url %> </p>
-</div>
-<div class="row justified-row">
-  <p>Now also has <%= link_to 'analytics(charts)', audit_rails.analytics_audits_url %> for user counts and page views</p>
-  <%= link_to image_tag('analytics.png'), audit_rails.analytics_audits_url%>
-</div>
-<div class="row justified-row">
-  <% unless @current_user %>
-    <div class="small-8 row" style='padding-left: 17px;'>
-      <h3 class="subheader">Want to see it in action?</h3>
-      <%= form_for(@user, :url => login_path) do |f| %>
-        <div class="small-5 left">
-          <%= f.text_field :name, class: "round #{'error' if flash[:error]}", placeholder: "Enter Ram or John" %>
-          <%= f.submit "Enter", class: "button round small" %>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+<div class="row">
+  <div class="col-lg-6">
+    <h3 class="subheader">Features</h3>
+    <ul>
+      <li>
+        Track few or all user actions, (not just activerecord cruds!)
+      </li>
+      <li>
+        Track outgoing links
+      </li>
+      <li>
+        Download report for user actions (<%= link_to 'Sample audit report', audit_rails.analytics_audits_url(commit: "Download Filtered Report") %>) or
+      </li>
+      <li>
+        See user actions in <%= link_to 'Cool Analytics', audit_rails.analytics_audits_url %>!
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-6">
+    <h3 class="subheader">2 mins demo, in 3 steps!</h3>
+    <div class='footnote'>TLDR; (move to Step#3 directly!)</div>
+    <ul>
+      <li>
+        <% unless @current_user %>
+          <%= render partial: 'user_selection' %>
+        <% else %>
+          <%= 'Already logged in! Move to Step#2 & Step#3' if @current_user %>
+        <% end %>
+      </li>
+      <li>
+        Perform CRUD operations
+      </li>
+      <li>
+        Explore <%= link_to 'Cool Analytics', audit_rails.analytics_audits_url %>!
+      </li>
+    </ul>  
+  </div>
 </div>

@@ -1,6 +1,8 @@
-.top-header{
+.header-container,.footer-container{
   background-color: #33aeb8;
   border: none;
+  right: 0;
+  left: 0;
 }
 .navbar-bottom{
   padding-top: 62px;
@@ -8,17 +10,25 @@
 .justified-row{
   text-align: center;
 }
+.footer-container{
+  bottom: 0;
+  left:0;
+  position:fixed;
+}
 .footer{
-  margin-top: 20px;
-  background-color: #33aeb8;
   font-size: 10px;
-  height: 50px;
   padding: 20px;
   color: #ffffff;
-  border-radius: 5px;
+  bottom:0;
 }
 #totalVisitors, #uniqueVisitors{
   height: 240px;
   width: 240px;
+  float: left;
+}
+.content{
+  margin-top: 120px;
+}
+.left{
   float: left;
 }

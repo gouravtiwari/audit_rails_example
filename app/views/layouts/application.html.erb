@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    <div class='container'>
-      <div class="navbar navbar-tabs top-header">
+    <div class="navbar navbar-default navbar-fixed-top header-container" role="navigation">
+      <div class='container'>
         <div class="navbar-header">
           <a class="brand" href="/"> <%= image_tag 'logo.png'%></a>
         </div>
@@ -23,15 +23,18 @@
             <li>
               <%= link_to 'Analytics', audit_rails.analytics_audits_url %>
             </li>
+            <%= render partial: 'layouts/current_user_tabs' if @current_user %>
           </ul>
         </div><!--/.nav-collapse -->
+        <a href="https://github.com/gouravtiwari/audit_rails/fork"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
       </div>
-      <a href="https://github.com/gouravtiwari/audit_rails/fork"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    </div>
+    <div class='container content'>
       <%= yield %>
     </div>
     <%= javascript_include_tag "application" %>
-    <div class='container'>
-      <div class="footer">
+    <div class='footer-container'>
+      <div class='footer container'>
         Copyright 2014 © Audit Rails
       </div>
     </div>

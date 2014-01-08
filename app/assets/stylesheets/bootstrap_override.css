@@ -1,6 +1,5 @@
-.container{
+body{
   background-color: #f2f2f2;
-  padding: 0;
 }
 .row{
   margin:0;
@@ -9,25 +8,33 @@
 .navbar{
   border-bottom: 0;
 }
-.navbar-nav{
+.navbar-default .navbar-nav{
   margin-left: 70px;
 }
-.navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a {
 padding-top: 7px;
 padding-bottom: 7px;
 background-color: #006978;
 color: #f2f2f2;
 height: 38px;
 }
-.navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:hover {
 padding-top: 7px;
 padding-bottom: 7px;
 background-color: #2C8D94;
 color: #f2f2f2;
 }
-.navbar-nav > li.active > a {
+.navbar-default .navbar-nav > li.active > a {
 padding-top: 7px;
 padding-bottom: 7px;
 background-color: #f2f2f2;
 color: #006978;
+}
+
+.navbar-default .navbar-nav > li.logged-in > a,
+.navbar-default .navbar-nav > li.logged-in > a:hover {
+padding-top: 7px;
+padding-bottom: 7px;
+background-color: #33aeb8;
+color: #f2f2f2;
 }

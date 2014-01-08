@@ -1,0 +1,5 @@
+Select a user: 
+<%= form_for(@user, :url => login_path) do |f| %>
+  <%= f.text_field :name, class: "round #{'error' if flash[:error]}", placeholder: "Enter Ram or John" %>
+  <%= f.submit "Enter", class: "button round small" %>
+<% end %>
