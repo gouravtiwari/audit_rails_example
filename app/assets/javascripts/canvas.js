@@ -28,11 +28,11 @@ function circles(elementId){
       context.textBaseline='middle';
       
       //count
-      context.font = '72px Helvetica Neue LT std';
+      context.font = '72px HelveticaNeueLTStdUltLtCn';
       context.fillText(countTotal, centerX, centerY);
 
       // label
-      context.font = '24px Helvetica Neue LT std';
+      context.font = '24px HelveticaNeueLTStdUltLtCn';
       context.fillText(labelTotal, centerX, centerY + centerY/2);
       context.closePath();
 
@@ -52,11 +52,11 @@ function circles(elementId){
       context.textBaseline='middle';
       
       //count
-      context.font = '72px Helvetica Neue LT std';
+      context.font = '72px HelveticaNeueLTStdUltLtCn';
       context.fillText(countUnique, centerX, centerY);
 
       // label
-      context.font = '24px Helvetica Neue LT std';
+      context.font = '24px HelveticaNeueLTStdUltLtCn';
       context.fillText(labelUnique, centerX, centerY + centerY/2);
 
       div.appendChild(canvas);

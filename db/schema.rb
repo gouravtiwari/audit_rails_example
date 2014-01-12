@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109063719) do
+ActiveRecord::Schema.define(version: 20140112182854) do
 
   create_table "audit_rails_audits", force: true do |t|
     t.string   "action"
@@ -19,13 +19,6 @@ ActiveRecord::Schema.define(version: 20131109063719) do
     t.string   "description"
     t.string   "user_name"
     t.string   "ip_address"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "posts", force: true do |t|
-    t.string   "name"
-    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

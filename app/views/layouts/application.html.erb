@@ -17,12 +17,13 @@
         </div>
         <div class="navbar-collapse collapse navbar-bottom">
           <ul class="nav navbar-nav">
-            <li class="<%= selected('home') %>">
+            <li class="<%= selected('home', 'index') %>">
               <%= link_to 'Home', '/' %>
             </li>
             <li>
               <%= link_to 'Analytics', audit_rails.analytics_audits_url %>
             </li>
+            <li class="<%= selected('home','about') %>"><%= link_to 'About', about_url %></li>
             <%= render partial: 'layouts/current_user_tabs' if @current_user %>
           </ul>
         </div><!--/.nav-collapse -->

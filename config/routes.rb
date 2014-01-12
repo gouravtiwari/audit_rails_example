@@ -1,12 +1,12 @@
 AuditRailsExample::Application.routes.draw do
   mount AuditRails::Engine, at: "/audit_rails"
-  resources :posts
 
   resources :users, except: [:edit, :update, :destroy]
 
-  post  'login' => 'users#login', as: :login
-  get   'logout' => 'users#logout', as: :logout
+  post  'login' => 'users#login',   as: :login
+  get   'logout'=> 'users#logout',  as: :logout
 
+  get   'about' => 'home#about',    as: :about
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

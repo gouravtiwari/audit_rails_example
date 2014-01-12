@@ -32,3 +32,18 @@
 .left{
   float: left;
 }
+.motto{
+  font-family: HelveticaNeueLTStdLtCn;
+  font-size: 24px;
+}
+.homepage-heading{
+  font-family: HelveticaNeueLTStdLtCn;
+  font-weight: bold;
+  font-size: 24px; 
+}
+ul.homepage-content li,
+ol.homepage-content li,
+.homepage-content{
+  font-family: HelveticaNeueLTStdLtCn;
+  font-size: 18px; 
+}

@@ -13,3 +13,12 @@
  *= require bootstrap_override
  *= require styles
  */
+
+@font-face {
+  font-family: HelveticaNeueLTStdLtCn;
+  src: url('HelveticaNeueLTStd-LtCn.otf') format('opentype');
+}
+@font-face {
+  font-family: HelveticaNeueLTStdUltLtCn;
+  src: url('HelveticaNeueLTStd-UltLtCn.otf') format('opentype');
+}

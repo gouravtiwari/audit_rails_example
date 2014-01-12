@@ -1,18 +1,23 @@
-<div class="row justified-row">
+<div class="row justified-row motto">
   <p><%=link_to 'Audit Rails', 'https://github.com/gouravtiwari/audit_rails' %> is an auditor for your rails application and much more!</p>
 </div>
 <div class="row justified-row">
   <div id='visitor-count' class="visitors-row" data-count-total='<%= @visitor_count %>' data-label-total='Total Visitors' data-count-unique='<%= @unique_visitor_count %>' data-label-unique='Unique Visitors'></div>
 </div>
-<div class="row">
-  <div class="col-lg-6">
-    <h3 class="subheader">Features</h3>
-    <ul>
+<div class="row feature-section">
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-5">
+    <h3 class="subheader homepage-heading">Features</h3>
+    <ul class='homepage-content'>
       <li>
         Track few or all user actions, (not just activerecord cruds!)
       </li>
       <li>
         Track outgoing links
+      </li>
+      <li>
+        Your data goes to your application database, so no security concerns!
       </li>
       <li>
         Download report for user actions (<%= link_to 'Sample audit report', audit_rails.analytics_audits_url(commit: "Download Filtered Report") %>) or
@@ -22,10 +27,11 @@
       </li>
     </ul>
   </div>
-  <div class="col-lg-6">
-    <h3 class="subheader">2 mins demo, in 3 steps!</h3>
-    <div class='footnote'>TLDR; (move to Step#3 directly!)</div>
-    <ul>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-5">
+    <h3 class="subheader homepage-heading">Explore in 3 easy steps!</h3>
+    <ol class='homepage-content'>
       <li>
         <% unless @current_user %>
           <%= render partial: 'user_selection' %>
@@ -34,7 +40,7 @@
         <% end %>
       </li>
       <li>
-        Perform CRUD operations
+        Perform CRUD operations &nbsp; (optional)
       </li>
       <li>
         Explore <%= link_to 'Cool Analytics', audit_rails.analytics_audits_url %>!

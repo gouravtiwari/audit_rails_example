@@ -3,7 +3,11 @@ module ApplicationHelper
     controller_name == name
   end
 
-  def selected(name)
-    current_controller?(name) ? 'active' : ''
+  def current_action?(name)
+    action_name == name
+  end
+
+  def selected(controller, action)
+    current_action?(action) && current_controller?(controller) ? 'active' : ''
   end
 end
