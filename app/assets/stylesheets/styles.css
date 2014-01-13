@@ -47,3 +47,17 @@ ol.homepage-content li,
   font-family: HelveticaNeueLTStdLtCn;
   font-size: 18px; 
 }
+ul.error-explanation{
+  margin:0;
+  padding:0
+}
+ul.error-explanation li{
+  color: red;
+  list-style-type: none;;
+}
+.field_with_errors input{
+  border-color: #F778A1;
+}
+.notice{
+  color: green;
+}

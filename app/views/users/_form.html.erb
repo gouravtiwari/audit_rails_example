@@ -1,21 +1,26 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
+<h3 class='subheader homepage-heading'>Add a new user</h3>
+<% if notice %>
+  <div class="notice">
+    <%= notice %>
+  </div>
+<% end %>
+<%= form_for(@new_user) do |f| %>
+  <% if @new_user.errors.any? %>
+    <div>
+      <ul class="error-explanation">
+      <% @new_user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="field left">
+    <%= f.text_field :name, placeholder: 'name' %>
   </div>
-  <div class="actions">
-    <%= f.submit 'Add new user', class: 'button round small' %> |   <%= link_to 'Back', users_path, class: 'button round small' %>
+  <div class="field left">
+    &nbsp;
+  </div>
+  <div class="actions left">
+    <%= f.submit 'Add', class: 'button round small' %>
   </div>
 <% end %>

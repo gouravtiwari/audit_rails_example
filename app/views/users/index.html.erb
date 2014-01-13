@@ -1,11 +1,26 @@
-<div class="small-4">
-  <h3>Users</h3>
-  <%= link_to 'Add new user', new_user_path %>
-  <br/><br/>
-    <ul>
-      <% @users.each do |user| %>
-        <li><%= link_to user.name, user %></li>
-      <% end %>
-    </ul>
-  <br/>
+<br/>
+<div class="row">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-4 homepage-content">
+    <%= render partial: 'form' %>
+    <br/>
+    <br/>
+    <div class='motto'>
+      Explore these actions via <%= link_to 'Analytics', audit_rails.analytics_audits_url %>
+    </div>
+    <br/>
+    <%= render partial: 'show' if @user %>
+  </div>
+  <div class="col-sm-4">
+    <h3 class='subheader homepage-heading'>All users</h3>
+      <ul class='homepage-content'>
+        <% @users.each do |user| %>
+          <li><%= link_to user.name, user %></li>
+        <% end %>
+      </ul>
+    <br/>
+  </div>
+  <div class="col-sm-2">
+  </div>
 </div>

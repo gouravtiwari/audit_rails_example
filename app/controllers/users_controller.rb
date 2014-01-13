@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_current_user, except: [:login]
   before_action :set_user, only: [:show]
   before_action :find_user, only: [:login]
+  before_action :add_instance_variables, only: [:index, :show]
 
   def login
     session[:current_user] = @user
@@ -9,7 +10,6 @@ class UsersController < ApplicationController
       redirect_to users_url
     else
       @user = User.new
-      flash[:error] = 'Please enter Ram or John'
       render 'home/index'
     end
   end
@@ -19,41 +19,34 @@ class UsersController < ApplicationController
     redirect_to root_url
   end
 
-  # GET /users
-  # GET /users.json
   def index
-    @users = User.all
   end
 
-  # GET /users/1
-  # GET /users/1.json
   def show
+    render action: 'index'
   end
 
-  # GET /users/new
-  def new
-    @user = User.new
-  end
-
-  # POST /users
-  # POST /users.json
   def create
-    @user = User.new(user_params)
-
+    @new_user = User.new(user_params)
+    @users = User.all
     respond_to do |format|
-      if @user.save
+      if @new_user.save
         format.html { redirect_to users_url, notice: 'User was successfully created.' }
       else
-        format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.html { render action: 'index' }
+        format.json { render json: @new_user.errors, status: :unprocessable_entity }
       end
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def add_instance_variables
+      @new_user = User.new
+      @users = User.sorted_user
     end
 
     def find_user

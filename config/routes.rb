@@ -1,7 +1,7 @@
 AuditRailsExample::Application.routes.draw do
   mount AuditRails::Engine, at: "/audit_rails"
 
-  resources :users, except: [:edit, :update, :destroy]
+  resources :users, except: [:edit, :update, :destroy, :new]
 
   post  'login' => 'users#login',   as: :login
   get   'logout'=> 'users#logout',  as: :logout
