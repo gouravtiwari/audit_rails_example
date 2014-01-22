@@ -13,3 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+circles('visitorCountBg');
+
+var totalVisitors = document.getElementById("totalVisitors");
+var countTotal = totalVisitors.getAttribute('data-count-total');
+var totalVisitorsCountUp = new countUp("totalVisitors", 0, countTotal, 0, 3);
+totalVisitorsCountUp.start();
+
+var uniqueVisitors = document.getElementById("uniqueVisitors");
+var countUnique = uniqueVisitors.getAttribute('data-count-unique');
+var uniqueVisiorsCountUP = new countUp("uniqueVisitors", 0, countUnique, 0, 3);
+uniqueVisiorsCountUP.start();

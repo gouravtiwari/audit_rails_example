@@ -10,6 +10,10 @@
 .justified-row{
   text-align: center;
 }
+.justified-row-container{
+  text-align: center;
+  position: relative; 
+}
 .footer-container{
   bottom: 0;
   left:0;
@@ -21,10 +25,23 @@
   color: #ffffff;
   bottom:0;
 }
-#totalVisitors, #uniqueVisitors{
-  height: 240px;
-  width: 240px;
+#totalCount, #uniqueCount{
+  height: 230px;
+  width: 230px;
   float: left;
+}
+#totalVisitors, #uniqueVisitors{
+  padding-top: 80px;
+  font: 72px HelveticaNeueLTStdUltLtCn;
+}
+.visitor-label{
+  font: 24px HelveticaNeueLTStdUltLtCn;
+  padding-top: 10px;
+}
+#visitorCount{
+  position: absolute;
+  top: 0px;
+  left: 330px;
 }
 .content{
   margin-top: 120px;

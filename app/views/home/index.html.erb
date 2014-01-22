@@ -1,8 +1,18 @@
 <div class="row justified-row motto">
   <p><%=link_to 'Audit Rails', 'https://github.com/gouravtiwari/audit_rails' %> is an auditor for your rails application and much more!</p>
 </div>
-<div class="row justified-row">
-  <div id='visitor-count' class="visitors-row" data-count-total='<%= @visitor_count %>' data-label-total='Total Visitors' data-count-unique='<%= @unique_visitor_count %>' data-label-unique='Unique Visitors'></div>
+<div class="row justified-row-container">
+  <div id='visitorCountBg'></div>
+  <div id='visitorCount' align='center'>
+    <div id='totalCount'>
+      <div id='totalVisitors' data-count-total='<%= @visitor_count %>'></div>
+      <div class='visitor-label'>Total Visitors</div>
+    </div>
+    <div id='uniqueCount'>
+      <div id='uniqueVisitors' data-count-unique='<%= @unique_visitor_count %>'></div>
+      <div class='visitor-label'>Unique Visitors</div>
+    </div>
+  </div>
 </div>
 <div class="row feature-section">
   <div class="col-lg-1">
