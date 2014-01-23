@@ -9,6 +9,8 @@ function circles(elementId){
       var context = canvas.getContext('2d');
       canvas.width = 460;
       canvas.height = 240;
+      canvas.style.left = '25%';
+      canvas.style.position = 'absolute';
       
       var radius = 120;
 

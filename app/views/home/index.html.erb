@@ -1,9 +1,8 @@
 <div class="row justified-row motto">
   <p><%=link_to 'Audit Rails', 'https://github.com/gouravtiwari/audit_rails' %> is an auditor for your rails application and much more!</p>
 </div>
-<div class="row justified-row-container">
-  <div id='visitorCountBg'></div>
-  <div id='visitorCount' align='center'>
+<div id='visitorCountBg' class="row justified-row-container">
+  <div id='visitorCount'>
     <div id='totalCount'>
       <div id='totalVisitors' data-count-total='<%= @visitor_count %>'></div>
       <div class='visitor-label'>Total Visitors</div>

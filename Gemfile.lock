@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/gouravtiwari/audit_rails
-  revision: 631cd09a537165ef71ef11c847db36fc704ca831
+  revision: c1a2251af9f865d0e0fd364c73418dd844f840b0
   specs:
     audit_rails (2.0.4)
       jquery-rails
