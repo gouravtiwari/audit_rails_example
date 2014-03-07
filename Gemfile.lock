@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/gouravtiwari/audit_rails
-  revision: ffab56fd95a11da56464f1847c33505e32094719
+  revision: f2a827025f7b5d5f09581c36960b796185b48d88
   specs:
-    audit_rails (2.0.5)
+    audit_rails (2.0.6)
       jquery-rails
       rails (> 3.2.6, < 5)
-      sleek_charts (~> 0.0.2)
+      sleek_charts (~> 0.0.3)
       to_xls (~> 1.5.1)
 
 GEM
@@ -97,7 +97,7 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
-    sleek_charts (0.0.2)
+    sleek_charts (0.0.3)
     spreadsheet (0.9.7)
       ruby-ole (>= 1.0)
     sprockets (2.10.0)
