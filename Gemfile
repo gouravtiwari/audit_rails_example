@@ -37,7 +37,7 @@ gem 'audit_rails', '~> 2.0.9'
 # gem 'sleek_charts', path: '/Users/gouravtiwari/rubyapps/sleek_charts'
 
 group :production do
-  # gem 'pg'
+  gem 'pg'
   gem 'rails_12factor'
 end
 
