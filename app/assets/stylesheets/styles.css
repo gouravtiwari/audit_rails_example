@@ -14,9 +14,13 @@
   text-align: center;
   position: relative; 
 }
+.row.feature-section{
+  min-height: 380px;
+}
 .footer-container{
   bottom: 0;
   left:0;
+  position: fixed;
 }
 .footer{
   font-size: 10px;
