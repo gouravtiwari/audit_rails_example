@@ -31,8 +31,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Auditor for your rails application
-gem 'audit_rails', '~> 2.0.9'
-# gem 'audit_rails', git: 'https://github.com/gouravtiwari/audit_rails'
+# gem 'audit_rails', '~> 2.0.9'
+gem 'audit_rails', git: 'https://github.com/gouravtiwari/audit_rails'
 # gem 'audit_rails', path: '/Users/gouravtiwari/audit_rails'
 # gem 'sleek_charts', path: '/Users/gouravtiwari/rubyapps/sleek_charts'
 

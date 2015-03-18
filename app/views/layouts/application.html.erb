@@ -12,9 +12,7 @@
   <body>
     <div class="navbar navbar-default navbar-fixed-top header-container" role="navigation">
       <div class='container'>
-        <div class="navbar-header">
-          <a class="brand" href="/"> <%= image_tag 'logo.png'%></a>
-        </div>
+        <%= render 'layouts/brand' %>
         <div class="navbar-collapse collapse navbar-bottom">
           <ul class="nav navbar-nav">
             <li class="<%= selected('home', 'index') %>">
@@ -27,17 +25,13 @@
             <%= render partial: 'layouts/current_user_tabs' if @current_user %>
           </ul>
         </div><!--/.nav-collapse -->
-        <a href="https://github.com/gouravtiwari/audit_rails/fork"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+        <%= render 'layouts/fork_me' %>
       </div>
     </div>
     <div class='container content'>
       <%= yield %>
     </div>
+    <%= render 'layouts/footer' %>
     <%= javascript_include_tag "application" %>
-    <div class='footer-container'>
-      <div class='footer container'>
-        Copyright 2014 © Audit Rails
-      </div>
-    </div>
   </body>
 </html>
