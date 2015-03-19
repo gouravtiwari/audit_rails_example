@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/gouravtiwari/audit_rails
-  revision: a5e83741279b3e15a86341c1374d39abc556f61d
+  revision: 629f9805b94f2d9b68d8fd3b817b0082ee869b9c
   specs:
-    audit_rails (2.0.9)
+    audit_rails (2.0.9.1.pre)
       jquery-rails
       rails (> 3.2.6, < 5)
       sleek_charts (~> 0.0.3)
