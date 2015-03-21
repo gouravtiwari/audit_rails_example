@@ -1,33 +1,59 @@
 <div class='rows homepage-content'>
-  <%=link_to 'Audit Rails', 'https://github.com/gouravtiwari/audit_rails' %> is an action based Auditor, which has internal as well as outgoing link tracking capability.
-</div>
-<br/>
-<div class='rows homepage-content'>
-It is inspired from many great audit gems in rails community that audits model. This one goes one step further. Roughly it is doing similar to what Omniture or Google analytics does, the biggest benefit is the audited data is your baby. So no more security concerns! Yay!
-</div>
-<br/>
-<div class='rows homepage-content'>
-Checkout these features in Audit Reports section in <%= link_to 'Analytics', audit_rails.analytics_audits_path %>
-</div>
-<br/>
-<div class='rows homepage-content'>
-  <h3 class="subheader homepage-heading">About the Author</h3>
-  <%=link_to 'Gourav Tiwari', 'https://github.com/gouravtiwari' %> is a full stack web developer. He is an agilistic-rubyist, who loves to explore different languages, so far knows Ruby, PHP, JavaScript &amp; C.
-  <br/>
-  <br/>
-  He has spoken to few conferences/meetups as well:
-  <ul class='homepage-content'>
-    <li>
-      Confoo.CA conference 2012 on Testing is fun!
-    </li>
-    <li>
-      Agile Alliance conference 2011 on Team to Wow Team!
-    </li>
-    <li>
-      Agile NYC meetup group
-    </li>
-    <li>
-      RubyNuby NYC meetup group
-    </li>
-  </ul>
+  <div class="col-lg-10">
+    <div class='rows'>
+      <h3 class="subheader homepage-heading">What is Audit Rails?</h3>
+    </div>
+    <div class='rows'>
+      <%=link_to 'Audit Rails', 'https://github.com/gouravtiwari/audit_rails' %> is an action based Auditor for Rails applications (of course for free!).
+      <br/>
+      It allows you to see which pages/areas of the application are used most in a <%= link_to 'professional analytics', audit_rails.analytics_audits_path %>. Also, if you like you can get an Excel sheet to download the usage report.
+    </div>
+    <h3 class="subheader homepage-heading">Is it just another Rails auditor gem?</h3>
+    <div class='rows'>
+      NO! There is much more you can do with it. It not only ensures 'Security Team' in your organization that the important actions are being tracked, and but it allows the Administrators/Developers to see their application usage too!
+      <br/>
+      Just by looking at <%= link_to 'analytics', audit_rails.analytics_audits_path %> page, you can tell:
+      <ol>
+        <li>A, B and C are my key users or</li>
+        <li>X, Y and Z areas in my application are most frequently visited or</li>
+        <li>My application is mostly used between say 1 PM to 5 PM! So, don't schedule any deployment at that time.</li>
+      </ol>
+      With the usage report in your hand and analytics to look at, you can derive so much information about your own application's usefulness.
+      <br/>
+      On top of that, your application's usage data lives within application, so no third party hassle and no security threat of data being stolen.
+    </div>
+    <h3 class="subheader homepage-heading">How does it work?</h3>
+    <h4 class="subheader homepage-heading">Internal links</h4>
+    <div class='rows'>
+      Simply add 'add_to_audit' method to the actions you would like to track. By default, it is included in ApplicationController, so all actions will be tracked. <%= link_to 'Read more on usage', 'https://github.com/gouravtiwari/audit_rails/blob/master/README.md#usage' %>
+    </div>
+    <h4 class="subheader homepage-heading">External links</h4>
+    <div class='rows'>
+      Give an ajax call to an action in application before the link is going out and this will be tracked in application.
+    </div>
+
+    <h3 class="subheader homepage-heading">What's next?</h3>
+    <div class='rows'>
+      Coming soon! ReactJS integration, yes you heard it right!
+    </div>
+    <h4 class="subheader homepage-heading">More collaborators needed, are you ready to join me?</h4>
+    <div class='rows'>
+    I would like to invite two-three more collaborators to take this forward
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <div class='rows homepage-content'>
+      <h3 class="subheader homepage-heading">About the Author</h3>
+    </div>
+    <div class='rows homepage-content'>
+      <%= image_tag 'author-1.png', title: 'Gourav Tiwari', class: 'img-circle' %>
+    </div>
+    <div class='rows homepage-content'>
+      <%=link_to 'Gourav Tiwari', 'https://github.com/gouravtiwari' %> is a full stack agile web-developer. When he is not coding, he loves to travel, read books, play guitar and listen music.
+    </div>
+    <br/>
+    <div class='rows homepage-content'>
+      Downloads <span class='download-count'>26880</span>
+    </div>
+  </div>
 </div>

@@ -50,7 +50,7 @@
 }
 .content{
   margin-top: 120px;
-  min-height: 500px;
+  padding-bottom: 70px;
 }
 .left{
   float: left;
@@ -59,11 +59,17 @@
   font-family: HelveticaNeueLTStdLtCn;
   font-size: 24px;
 }
-.homepage-heading{
+h3.homepage-heading{
   font-family: HelveticaNeueLTStdLtCn;
   font-weight: bold;
   font-size: 24px;
 }
+h4.homepage-heading{
+  font-family: HelveticaNeueLTStdLtCn;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 ul.homepage-content li,
 ol.homepage-content li,
 .homepage-content{
@@ -83,4 +89,14 @@ ul.error-explanation li{
 }
 .notice{
   color: green;
+}
+.download-count{
+  background-color: #33aeb8;
+  color: white;
+  padding: 4px 6px 1px 6px;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(#33aeb8, #2C8D94); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#33aeb8, #2C8D94); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#33aeb8, #2C8D94); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#33aeb8, #2C8D94); /* Standard syntax (must be last) */
 }
