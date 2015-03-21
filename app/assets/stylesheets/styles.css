@@ -12,12 +12,16 @@
 }
 .justified-row-container{
   text-align: center;
-  position: relative; 
+  position: relative;
+  min-height: 280px;
+}
+.row.feature-section{
+  min-height: 380px;
 }
 .footer-container{
   bottom: 0;
   left:0;
-  position:fixed;
+  position: fixed;
 }
 .footer{
   font-size: 10px;
@@ -38,7 +42,7 @@
   font: 24px HelveticaNeueLTStdUltLtCn;
 }
 #visitorCount{
-  position: relative;
+  position: absolute;
   top: 0px;
   left: 25%;
   z-index: 100;
@@ -46,6 +50,7 @@
 }
 .content{
   margin-top: 120px;
+  min-height: 500px;
 }
 .left{
   float: left;
@@ -57,13 +62,13 @@
 .homepage-heading{
   font-family: HelveticaNeueLTStdLtCn;
   font-weight: bold;
-  font-size: 24px; 
+  font-size: 24px;
 }
 ul.homepage-content li,
 ol.homepage-content li,
 .homepage-content{
   font-family: HelveticaNeueLTStdLtCn;
-  font-size: 18px; 
+  font-size: 18px;
 }
 ul.error-explanation{
   margin:0;
