@@ -1,13 +1,3 @@
-GIT
-  remote: https://github.com/gouravtiwari/audit_rails
-  revision: 629f9805b94f2d9b68d8fd3b817b0082ee869b9c
-  specs:
-    audit_rails (2.0.9.1.pre)
-      jquery-rails
-      rails (> 3.2.6, < 5)
-      sleek_charts (~> 0.0.3)
-      to_xls (~> 1.5.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,6 +27,11 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.15)
+    audit_rails (2.0.10)
+      jquery-rails
+      rails (> 3.2.6, < 5)
+      sleek_charts (~> 0.0.3)
+      to_xls (~> 1.5.1)
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -62,6 +57,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.0)
+    netrc (0.7.7)
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -88,6 +84,9 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    rest-client (1.7.1)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     ruby-ole (1.2.11.8)
     sass (3.2.14)
     sass-rails (4.0.1)
@@ -130,13 +129,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  audit_rails!
+  audit_rails (~> 2.0.10)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
   pg
   rails (= 4.0.0)
   rails_12factor
+  rest-client
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3

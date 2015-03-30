@@ -1,3 +1,6 @@
+require 'rest-client'
+require "audit_rails/version"
+
 class HomeController < ApplicationController
 
   def index
@@ -8,4 +11,9 @@ class HomeController < ApplicationController
   end
 
   def about; end
+
+  def gem_count
+    response =  RestClient.get(GEM_DOWNLOAD_COUNT_URL + AuditRails::VERSION + '.json')
+    render json: response
+  end
 end

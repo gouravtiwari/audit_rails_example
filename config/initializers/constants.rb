@@ -1,0 +1,1 @@
+GEM_DOWNLOAD_COUNT_URL = 'https://rubygems.org/api/v1/downloads/audit_rails-'

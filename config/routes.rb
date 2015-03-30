@@ -7,6 +7,7 @@ AuditRailsExample::Application.routes.draw do
   get   'logout'=> 'users#logout',  as: :logout
 
   get   'about' => 'home#about',    as: :about
+  get   'gem_count' => 'home#gem_count',    as: :gem_count
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -47,7 +48,7 @@ AuditRailsExample::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

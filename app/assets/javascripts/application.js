@@ -13,15 +13,25 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function(){
+  if($('#totalVisitors').length != 0){
+    circles('visitorCountBg');
 
-circles('visitorCountBg');
+    var totalVisitors = document.getElementById("totalVisitors");
+    var countTotal = totalVisitors.getAttribute('data-count-total');
+    var totalVisitorsCountUp = new countUp("totalVisitors", 0, countTotal, 0, 3);
+    totalVisitorsCountUp.start();
 
-var totalVisitors = document.getElementById("totalVisitors");
-var countTotal = totalVisitors.getAttribute('data-count-total');
-var totalVisitorsCountUp = new countUp("totalVisitors", 0, countTotal, 0, 3);
-totalVisitorsCountUp.start();
+    var uniqueVisitors = document.getElementById("uniqueVisitors");
+    var countUnique = uniqueVisitors.getAttribute('data-count-unique');
+    var uniqueVisiorsCountUP = new countUp("uniqueVisitors", 0, countUnique, 0, 3);
+    uniqueVisiorsCountUP.start();
+  }
 
-var uniqueVisitors = document.getElementById("uniqueVisitors");
-var countUnique = uniqueVisitors.getAttribute('data-count-unique');
-var uniqueVisiorsCountUP = new countUp("uniqueVisitors", 0, countUnique, 0, 3);
-uniqueVisiorsCountUP.start();
+  if($('.download-count').length != 0){
+    $.get('/gem_count.json', function(data){
+      $('.gem-counter-spinner').hide();
+      $('.download-count').text('Total: '+ data.total_downloads);
+    });
+  }
+});
